@@ -76,6 +76,10 @@ class _DataEntryState extends State<DataEntry> {
     }
 
     await sheet.values.map.appendRow(nextRow);
+    message = null;
+    setState(() {
+
+    });
   }
 
   Future<void> prepareData() async {
@@ -104,7 +108,7 @@ class _DataEntryState extends State<DataEntry> {
     }
 
     if(DateTime.now().millisecondsSinceEpoch < _selectedDate.millisecondsSinceEpoch) {
-      message = "Invalid input";
+      message = "Date cant be greater than today.";
       setState(() {
 
       });
