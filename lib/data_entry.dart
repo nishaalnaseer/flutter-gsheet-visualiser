@@ -69,7 +69,7 @@ class _DataEntryState extends State<DataEntry> {
         'paid': paid,
         'mvr/ltr': mvrLtr,
         "travelled": travelled,
-        "km/mvr": travelled/paid,
+        "km/mvr": paid/mvrLtr,
         "fuel input (ltrs)": fuelInput,
         "km/ltr": travelled/fuelInput,
       };
